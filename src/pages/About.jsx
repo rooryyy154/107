@@ -1,4 +1,6 @@
 import {useState, useContext} from 'react';
+import { IconMailOff } from '@tabler/icons-react';
+import { IconMail } from '@tabler/icons-react';
 //add useContext step 1
 import GlobalContext from '../state/globalContext';
 //add global context step 2
@@ -29,8 +31,8 @@ function About (){
                 ?<p className='fs-4 text-secondary'>jesus.martinez67@sdgku.edu</p>
                 :<p>Click the button bellow to see my email address.</p>
             }
-            <button className="btn btn-success me-4" onClick={(hideEmail)}>Hide my email</button>
-            <button className="btn btn-success" onClick={(showEmail)}>Show my email</button>
+            <button className="btn btn-success me-4" onClick={(hideEmail)}><IconMailOff />Hide my email</button>
+            <button className="btn btn-success" onClick={(showEmail)}><IconMail />Show my email</button>
         </div>
     )
 }
