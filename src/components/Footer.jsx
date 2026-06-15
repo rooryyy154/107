@@ -2,7 +2,7 @@ import './footer.css'
 
 function Footer() {
     return(
-        <footer className="bg-success bg-gradient text-light p-3 d-flex justify-content-between">
+        <footer className="bg-primary bg-gradient text-light p-3 d-flex justify-content-between">
             <h2 className="fs-6">© 2026 Healthy Store</h2>
 
             <nav className="d-flex gap-3">

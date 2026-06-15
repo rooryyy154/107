@@ -40,14 +40,16 @@ function Admin(){
 
     return(
         <div className="container mt-4 mb-5">
-            <h1 className="mb-4">Store Administration</h1>
+            <div className="bg-primary text-white p-3 rounded mb-4">
+                <h1 className="mb-0">Store Administration</h1>
+            </div>
 
             <div className="d-flex gap-4">
                 <section className="w-50">
                     <h2>Add Products</h2>
 
                     <div>
-                        <div className="card">
+                        <div className="card border-primary">
                             <div className="card-body">
 
                                 <div className="mb-3">
@@ -83,7 +85,7 @@ function Admin(){
                                 </div>
 
                                 <div className="text-center">
-                                    <button className="btn btn-dark" onClick={saveProduct}>Save Product</button>
+                                    <button className="btn btn-primary" onClick={saveProduct}>Save Product</button>
                                 </div>
 
                             </div>
@@ -96,7 +98,7 @@ function Admin(){
                             : <div className="d-flex flex-wrap gap-3 mt-3">
                                 {
                                     products.map((prod, index) => (
-                                        <div key={index} className="card" style={{width: "14rem"}}>
+                                        <div key={index} className="card border-primary" style={{width: "14rem"}}>
                                             {prod.image ? (
                                                 <img src={prod.image} className="card-img-top" alt={prod.title} style={{height: "150px", objectFit: "cover"}} />
                                             ) : (
@@ -120,7 +122,7 @@ function Admin(){
                     <h2>Add Coupons</h2>
 
                     <div>
-                        <div className="card">
+                        <div className="card border-primary">
                             <div className="card-body">
 
                                 <div className="mb-3">
@@ -140,7 +142,7 @@ function Admin(){
                                 </div>
 
                                 <div className="text-center">
-                                    <button className="btn btn-dark" onClick={saveCoupon}>Save Coupon</button>
+                                    <button className="btn btn-primary" onClick={saveCoupon}>Save Coupon</button>
                                 </div>
 
                             </div>
@@ -155,7 +157,7 @@ function Admin(){
                             : <ul className="list-group">
                                 {
                                     coupons.map((coupon, index) => (
-                                        <li key={index} className="list-group-item d-flex justify-content-between">
+                                        <li key={index} className="list-group-item list-group-item-primary d-flex justify-content-between">
                                             <span>{coupon.code}</span> 
                                             <span>{coupon.discount}%</span>
                                         </li>

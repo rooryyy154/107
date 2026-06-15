@@ -47,12 +47,12 @@ function filter(category)
     setProductsToDisplay(list);
 }
     return (
-        <div className="container">
+        <div className="container bg-primary-subtle p-4 rounded">
             <h1>Welcome to the GameZone!</h1>
             <p>These are our available games!</p>
             <div className="mb-3">
-                <button className="btn btn-success me-2" onClick={clearFilter}>All</button>
-                {categories.map(cat => <button className="btn btn-success me-2" key={cat} onClick={() => filter(cat)}>{cat}</button>)}
+                <button className="btn btn-primary me-2" onClick={clearFilter}>All</button>
+                {categories.map(cat => <button className="btn btn-primary me-2" key={cat} onClick={() => filter(cat)}>{cat}</button>)}
             </div>
             <div className="d-flex flex-wrap gap-3 mb-5">
                 {productsToDisplay.map(prod => <Product key={prod._id} data={prod}/>)}

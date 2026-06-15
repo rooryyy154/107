@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from './pages/Contact';
 import Admin from "./pages/Admin";
+import Cart from "./pages/Cart"
 import PageNotFound from './pages/PageNotFound';
 
 import HelloMessage from "./components/HelloMessage";
@@ -14,6 +15,7 @@ import Navbar from "./components/Navbar";
 import GlobalProvider from './state/globalProvider';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import QuantityPicker from "./components/QuantityPicker";
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
           <Route path='/catalog' element={<Catalog/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/admin' element={<Admin/>}/>
+          <Route path='/cart' element={<Cart/>}/>
           <Route path="*" element={<PageNotFound/>}/>
         </Routes>
       </main>

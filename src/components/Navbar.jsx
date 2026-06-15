@@ -1,18 +1,30 @@
 import {useState, useContext} from 'react';
 import GlobalContext from '../state/globalContext';
 import { Link } from "react-router-dom"
+import { IconShoppingCart } from '@tabler/icons-react';
 import "./Navbar.css"
 
 function Navbar() {
-    const user = useContext(GlobalContext).user
+    const user = useContext(GlobalContext).user;
+    const cart = useContext(GlobalContext).cart;
+
+    function getTotalItems() {
+      let total = 0;
+
+      for(let index=0; index<cart.length; index++) {
+        total = total + cart[index].quantity
+      }
+
+      return total;
+    }
     return(
 <nav
-  className="navbar navbar-expand-lg bg-success bg-gradient"
+  className="navbar navbar-expand-lg bg-primary bg-gradient"
   data-bs-theme="dark"
 >
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
-      Healthy Store
+      GameZone
     </a>
     <button
       className="navbar-toggler"
@@ -58,7 +70,15 @@ function Navbar() {
         </li>
       </ul>
     </div>
-    <div >{user.name}-{user.cohort}</div>
+    <div className='text-white m-4'>{user.name}-{user.cohort}</div>
+    
+    <Link className='nav-link text-white border border-white rounded position-relative p-1 me-2' to="/cart">
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        {getTotalItems()}
+      </span>
+    <IconShoppingCart/>
+    Cart
+    </Link>
   </div>
 </nav>
     )

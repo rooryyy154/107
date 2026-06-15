@@ -2,7 +2,7 @@ import { useState } from "react";
 import GlobalContext from './globalContext';
 
 function GlobalProvider(props){
-    const [cart, setCart] = useState({});
+    const [cart, setCart] = useState([]);
     const [user, setUser] = useState({name: 'Arturo', cohort: '67'});
 
     function addProductToCart(product) {

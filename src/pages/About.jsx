@@ -22,17 +22,17 @@ function About (){
     }
 
     return(
-        <div className='text-center'>
+        <div className='text-center bg-primary text-white p-5 rounded'>
             <h1>Welcome to my About Page</h1>
             <h2>I am {user.name}</h2>
 
             { 
                 isEmailVisible == true 
-                ?<p className='fs-4 text-secondary'>jesus.martinez67@sdgku.edu</p>
+                ?<p className='fs-4 text-white'>jesus.martinez67@sdgku.edu</p>
                 :<p>Click the button bellow to see my email address.</p>
             }
-            <button className="btn btn-success me-4" onClick={(hideEmail)}><IconMailOff />Hide my email</button>
-            <button className="btn btn-success" onClick={(showEmail)}><IconMail />Show my email</button>
+            <button className="btn btn-light text-primary me-4" onClick={(hideEmail)}><IconMailOff />Hide my email</button>
+            <button className="btn btn-light text-primary" onClick={(showEmail)}><IconMail />Show my email</button>
         </div>
     )
 }

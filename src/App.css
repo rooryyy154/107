@@ -1,3 +1,25 @@
+:root {
+  --bs-primary: #6f42c1;
+  --bs-primary-rgb: 111, 66, 193;
+  --bs-primary-bg-subtle: #e6dbf7;
+  --bs-primary-border-subtle: #c8a8ef;
+  --bs-primary-text-emphasis: #2c1a4d;
+}
+
+.btn-primary {
+  --bs-btn-bg: #6f42c1;
+  --bs-btn-border-color: #6f42c1;
+  --bs-btn-hover-bg: #5d36a4;
+  --bs-btn-hover-border-color: #5732a0;
+  --bs-btn-active-bg: #5732a0;
+  --bs-btn-active-border-color: #512e96;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
